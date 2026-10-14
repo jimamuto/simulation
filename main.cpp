@@ -32,6 +32,7 @@ random_device rd; //random number seed generator
     double previousArrivalTime = 0.0;
     double previousServiceEndTime = 0.0;
     double totalWaitTime = 0.0;
+    double totalSystemTime = 0.0;
 
     //running loop for all customers
     for (int i= 1;i <= customers ; i++)
@@ -48,6 +49,8 @@ random_device rd; //random number seed generator
         c.serviceEndTime = c.serviceStartTime + c.serviceTime;
 
         totalWaitTime+=c.waitingTime;
+        totalSystemTime += (c.serviceEndTime - c.arrivalTime);
+
 
         //save
         records.push_back(c);
@@ -82,6 +85,8 @@ random_device rd; //random number seed generator
     cout << "Total Customers Processed: " << customers << endl;
     cout << "Average Waiting Time: " << (totalWaitTime / customers) << " minutes" << endl;
     cout << "Total Time in System: " << previousServiceEndTime << " minutes" << endl;
+    cout << "Average Time in System: " << (totalSystemTime / customers) << " minutes" << endl;
+
 }
 int main()
 {
