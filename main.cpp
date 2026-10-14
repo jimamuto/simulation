@@ -1,3 +1,8 @@
+// 1. 189609 Amuto Jim Onyango
+// 2 . 191351 Gatiti Estelle Nyawira
+// 3 . 167298 Moye Jemima Thadeus
+//4 . 168381 Wambui Nicholas Njue
+
 #include <iostream>
 #include <random>
 #include <vector>
