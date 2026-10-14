@@ -15,7 +15,7 @@ struct CustomerRecord
     double serviceEndTime;
 };
 
-//running bank queue simulation
+//running queue simulation
 void Simulation(int customers,double MinArrival, double MaxArrival,double MinService,double MaxService)
 {
 random_device rd; //random number seed generator
@@ -97,11 +97,8 @@ int main()
     cin>>MinArrival>>MaxArrival;
     cout<<"Enter minimum and maximum  service times"<<endl;
     cin>>MinService>>MaxService;
-    cin.ignore();
 
     cout<<"input successfully recorded"<<endl;
-    //waiting for all inputs
-    cin.get();
 
     Simulation(customers,MinArrival,MaxArrival,MinService,MaxService);
     return 0;
